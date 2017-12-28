@@ -49,11 +49,14 @@ function removeFromCart(item) {
   else{
     var unwanted = false;
     for(item in cart){
+      var i = cart.indexOf(item);
       if(cart.hasOwnProperty(item)){
         unwanted = true;
+        cart.splice(i,1);
       }
     }
   }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
