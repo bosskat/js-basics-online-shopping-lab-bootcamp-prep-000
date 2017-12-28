@@ -23,8 +23,8 @@ function viewCart() {
   else{
     var items = [];
     for(var i = 0; i < cart.length; i++){
-      for (var item in cart){
-        items.push(cart[i]);
+      for (var item in cart[i]){
+        items.push(`${item} at $${cart[i]}`);
       }
     }
   }
