@@ -42,12 +42,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if(!item){
+  var unwanted = false;
+  if(!unwanted){
     console.log("That item is not in your cart.");
     return cart;
   }
   else{
-    var unwanted = false;
     for(item in cart){
       var i = cart.indexOf(item);
       if(cart.hasOwnProperty(item)){
