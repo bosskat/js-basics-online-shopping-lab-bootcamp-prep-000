@@ -23,7 +23,7 @@ function viewCart() {
   else{
     var items = [];
     for(var i = 0; i < cart.length; i++){
-      for (item in cart){
+      for (var item in cart){
         items.push(cart[i]);
       }
     }
