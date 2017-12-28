@@ -43,11 +43,6 @@ function total() {
 
 function removeFromCart(item) {
   var unwanted = false;
-  if(!unwanted){
-    console.log("That item is not in your cart.");
-    return cart;
-  }
-  else{
     for(item in cart){
       var i = cart.indexOf(item);
       if(cart.hasOwnProperty(item)){
@@ -55,7 +50,10 @@ function removeFromCart(item) {
         cart.splice(i,1);
       }
     }
-  }
+    if(!unwanted){
+      console.log("That item is not in your cart.");
+      return cart;
+    }
   return cart;
 }
 
